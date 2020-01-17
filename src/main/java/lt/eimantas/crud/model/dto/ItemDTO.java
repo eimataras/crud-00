@@ -35,5 +35,7 @@ public class ItemDTO {
 
     public void setDone(Boolean done) {
         isDone = done;
+
+
     }
 }
