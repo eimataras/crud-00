@@ -20,7 +20,9 @@ public class MainController {
 
     @PostMapping("/add")
     public void addItem(@RequestBody ItemDTO item) {
+
         mainService.save(item);
+
     }
 
     @PutMapping("/edit")
