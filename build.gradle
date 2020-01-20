@@ -19,8 +19,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springdoc:springdoc-openapi-ui:1.2.15'
-	implementation 'org.springdoc:springdoc-openapi-webmvc-core:1.2.15'
+
+	implementation 'org.springdoc:springdoc-openapi-ui:1.2.26'
+	implementation 'org.springdoc:springdoc-openapi-webmvc-core:1.2.26'
+
+	compileOnly 'org.projectlombok:lombok:1.18.10' // @Data Creates getters and setters when compiling
+	annotationProcessor 'org.projectlombok:lombok:1.18.10' // @Data Creates getters and setters when compiling
+
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

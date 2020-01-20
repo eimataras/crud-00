@@ -8,8 +8,8 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @SpringBootApplication
 public class CrudApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CrudApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CrudApplication.class, args);
+    }
 
 }
