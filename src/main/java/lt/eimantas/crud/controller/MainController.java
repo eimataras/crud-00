@@ -3,12 +3,10 @@ package lt.eimantas.crud.controller;
 import lt.eimantas.crud.model.MainService;
 import lt.eimantas.crud.model.dto.ItemDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value ="/to-do")
-
+@RequestMapping(value = "/to-do")
 
 public class MainController {
 
@@ -16,7 +14,7 @@ public class MainController {
     MainService mainService;
 
     @GetMapping("/all")
-    public Iterable<ItemDTO> getAll () {
+    public Iterable<ItemDTO> getAll() {
         return mainService.findAll();
     }
 
