@@ -13,7 +13,10 @@ public class ItemDTO {
     private String label;
     private Boolean isDone;
 
-    @OneToOne
-    @JoinColumn(name = "employee_id", referencedColumnName = "id")
-    private EmployeeDTO employee;
+    @Column(name = "employee_id")
+    private Integer employeeId;
+
+//    @OneToOne
+//    @JoinColumn(name = "employee_id", referencedColumnName = "id")
+//    private EmployeeDTO employee;
 }

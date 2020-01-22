@@ -17,19 +17,4 @@ public class CarDTO {
     private String model;
 
     private String year_made;
-
-
-
-//    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)  //mappedBy = "employee",
-//    private EmployeeDTO employee;
-
-
-//    @OneToOne(fetch = FetchType.LAZY, optional = false)
-//    @JoinColumn(name = "id", referencedColumnName = "employee_id", nullable = false)
-//    private EmployeeDTO employee;
-
-
-//    @OneToOne
-//    private EmployeeDTO employee;
-
 }
