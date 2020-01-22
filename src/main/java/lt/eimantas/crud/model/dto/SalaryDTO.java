@@ -2,10 +2,7 @@ package lt.eimantas.crud.model.dto;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Data  //creates getters and setters when compiling
@@ -13,9 +10,12 @@ import javax.validation.constraints.NotNull;
 public class SalaryDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
+
     private Float salary;
-    @NotNull
+
+    @Column(name = "employee_id")
     private Integer employeeId;
 
 }
