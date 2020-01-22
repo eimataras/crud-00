@@ -1,10 +1,8 @@
 package lt.eimantas.crud.model.dto;
 
 import lombok.Data;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 
 @Data //creates getters and setters when compiling
 @Entity (name = "item")
@@ -14,5 +12,8 @@ public class ItemDTO {
     private Integer id;
     private String label;
     private Boolean isDone;
-    private Integer  employeeId;
+
+    @OneToOne
+    @JoinColumn(name = "employee_id", referencedColumnName = "id")
+    private EmployeeDTO employee;
 }
