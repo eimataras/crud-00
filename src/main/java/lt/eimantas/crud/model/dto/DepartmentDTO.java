@@ -14,9 +14,7 @@ public class DepartmentDTO {
     @Column(name = "dep_name")
     private String depName;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "department_id", referencedColumnName = "id")
     private List<EmployeeDTO> employees;
-
-    //  @OneToMany(targetEntity = EmployeeDTO.class, mappedBy = "id", orphanRemoval = false, fetch = FetchType.LAZY)
 }
