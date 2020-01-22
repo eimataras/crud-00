@@ -4,6 +4,7 @@ import lt.eimantas.crud.model.DepService;
 import lt.eimantas.crud.model.dto.DepartmentDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/departments")
@@ -16,6 +17,13 @@ public class DepController {
     @GetMapping("/all")
     public Iterable<DepartmentDTO> getAllDep () {
         return depService.findAll();
+    }
+
+    @GetMapping("/:id")
+    public @ResponseBody
+    Optional<DepartmentDTO> getOneDepartmentWithEmployees(@RequestParam Integer departmentId){
+        Optional<DepartmentDTO> result = depService.findById(departmentId);
+        return result;
     }
 
     @PostMapping("/add")

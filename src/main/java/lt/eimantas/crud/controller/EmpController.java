@@ -14,7 +14,7 @@ public class EmpController {
     EmpService empService;
 
     @GetMapping("/all")
-    public  Iterable<EmployeeDTO> getAllEmp(){
+    public @ResponseBody Iterable<EmployeeDTO> getAllEmp(){
         return empService.findAll();
     }
 
